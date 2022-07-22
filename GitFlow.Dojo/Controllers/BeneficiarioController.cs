@@ -7,9 +7,11 @@ namespace GitFlow.Dojo.Controllers;
 public class BeneficiarioController : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> Get(int id)
+    public async Task<IActionResult> Get(int? id)
     {
         await Task.CompletedTask;
+        if (id.HasValue)
+            return Ok(new { id = id.Value });
         return NoContent();
     }
 }
