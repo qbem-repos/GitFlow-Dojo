@@ -12,6 +12,6 @@ public class BeneficiarioController : ControllerBase
         await Task.CompletedTask;
         if (id.HasValue)
             return Ok(new { id = id.Value });
-        return NoContent();
+        return NotFound();
     }
-}
+}   
