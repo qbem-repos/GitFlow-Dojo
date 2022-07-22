@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-//dependência adicionada
+//dependência adicionada    
 namespace GitFlow.Dojo.Controllers;
 
 [ApiController]
@@ -7,7 +7,7 @@ namespace GitFlow.Dojo.Controllers;
 public class BeneficiarioController : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> Get()
+    public async Task<IActionResult> Get(int id)
     {
         await Task.CompletedTask;
         return NoContent();
